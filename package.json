@@ -10,5 +10,17 @@
     "forum"
   ],
   "author": "Hayden Bradfield",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.2.0",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.21.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^1.19.4",
+    "sequelize-cli": "^5.5.1"
+  }
 }
