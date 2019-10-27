@@ -22,5 +22,5 @@ const generalRoutes = require('./routes/general');
 //Use Routes
 app.use(generalRoutes);
 
-
+//Listen
 app.listen(PORT, HOST, () => console.log(`Listening on port ${PORT} on ${HOST}!`));
