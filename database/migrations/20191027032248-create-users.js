@@ -27,10 +27,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       isSuspend: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN, 
+        defaultValue : 0
       },
       isDeleted: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN, 
+        defaultValue : 0
       },
       createdAt: {
         allowNull: false,

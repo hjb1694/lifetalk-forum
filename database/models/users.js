@@ -7,8 +7,14 @@ module.exports = (sequelize, DataTypes) => {
     role_id: DataTypes.INTEGER,
     currentPoints: DataTypes.INTEGER,
     lifetimePoints: DataTypes.INTEGER,
-    isSuspend: DataTypes.BOOLEAN,
-    isDeleted: DataTypes.BOOLEAN
+    isSuspend: {
+      type : DataTypes.BOOLEAN,
+      defaultValue : 0
+    },
+    isDeleted: {
+      type : DataTypes.BOOLEAN, 
+      defaultValue : 0
+    }
   }, {});
   users.associate = function(models) {
     // associations can be defined here
