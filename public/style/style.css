@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: #fafafa; }
+  background: #fafafa;
+  font-family: 'Roboto', sans-serif; }
 
 .header {
   min-height: 7rem;
@@ -23,4 +25,40 @@ body {
 
 .nav {
   min-height: 5rem;
-  background: linear-gradient(to bottom right, #417aa3, #69a5d1); }
+  background: linear-gradient(to bottom right, #417aa3, #69a5d1);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.nav-cat {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  transition: all .2s;
+  cursor: pointer; }
+  .nav-cat__title {
+    font-size: 2rem; }
+  .nav-cat:hover {
+    color: #fff;
+    fill: #fff; }
+
+.topics-pane {
+  min-height: 10rem;
+  background: #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem; }
+  .topics-pane__link {
+    display: block;
+    font-size: 2rem;
+    margin: 1rem;
+    transition: all .2s;
+    text-decoration: none; }
+    .topics-pane__link:hover {
+      color: #417aa3; }
+
+svg, .icon {
+  width: 3rem;
+  height: 3rem; }
