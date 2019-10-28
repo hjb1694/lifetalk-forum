@@ -18,8 +18,10 @@ app.set('views', 'views');
 
 //Import Routes
 const generalRoutes = require('./routes/general');
+const postRoutes = require('./routes/post');
 
 //Use Routes
+app.use('/post', postRoutes);
 app.use(generalRoutes);
 
 //Listen

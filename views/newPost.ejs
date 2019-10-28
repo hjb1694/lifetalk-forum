@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/headerNavs.ejs') %>
+        <form class="newPostForm">
+            <div class="form-group">
+                <label class="label" for="postHeadline">Post Headline</label>
+                <input type="text" class="text-input" id="postHeadline"/>
+            </div>
+            <div class="form-group">
+                <label class="label" for="postCategory">Category</label>
+                <select class="text-input" id="postCategory">
+                    <option>-- SELECT --</option>
+                </select>
+            </div>
+        </form>
+        <script>
+            const topicsLink = document.querySelector('.topics-link');
+            const topicsPane = document.querySelector('.topics-pane');
+
+            topicsLink.addEventListener('click', () => {
+                topicsPane.classList.toggle('show');
+            });
+        </script>
+    </body>
+</html>

@@ -36,7 +36,9 @@ body {
   align-items: center;
   margin: 0 1rem;
   transition: all .2s;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none;
+  color: #000; }
   .nav-cat__title {
     font-size: 2rem; }
   .nav-cat:hover {
@@ -44,12 +46,13 @@ body {
     fill: #fff; }
 
 .topics-pane {
-  min-height: 10rem;
+  height: 0;
+  overflow: hidden;
   background: #ddd;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem; }
+  transition: .3s all; }
   .topics-pane__link {
     display: block;
     font-size: 2rem;
@@ -58,7 +61,35 @@ body {
     text-decoration: none; }
     .topics-pane__link:hover {
       color: #417aa3; }
+  .topics-pane.show {
+    height: 10rem;
+    padding: 1rem; }
 
 svg, .icon {
   width: 3rem;
   height: 3rem; }
+
+.newPostForm {
+  margin: 2rem auto;
+  max-width: 75rem; }
+
+.form-group {
+  margin: 1rem 0; }
+
+.label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 3px; }
+
+.text-input {
+  border: 2px solid #ccc;
+  border-radius: .5rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: #333;
+  padding: .4rem .8rem;
+  display: block;
+  width: 100%;
+  outline: none; }
+  .text-input:focus {
+    border: 2px solid #ade2ff; }
