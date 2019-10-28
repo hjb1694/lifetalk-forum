@@ -119,3 +119,64 @@ svg, .icon{
         border:2px solid #ade2ff;
     }
 }
+
+select{
+    cursor:pointer;
+}
+
+.btn{
+    font-size:1.6rem;
+    border:0;
+    padding:1rem;
+    border-radius:.5rem;
+    cursor:pointer;
+
+    &--green{
+        background:#5dcf70;
+        color:#fff;
+    }
+}
+
+.poll-form{
+    background:#fff;
+    border:2px solid #ccc;
+    padding:1rem;
+    border-radius:.5rem;
+    display:none;
+    transition:.2s all;
+
+    &.show{
+        display:block;
+    }
+}
+
+.poll-option{
+    &--3{
+        display:none;
+
+        &.show{
+            display:block;
+        }
+    }
+    &--4{
+        display:none;
+
+        &.show{
+            display:block;
+        }
+    }
+    &--5{
+        display:none;
+
+        &.show{
+            display:block;
+        }
+    }
+    &--6{
+        display:none;
+
+        &.show{
+            display:block;
+        }
+    }
+}

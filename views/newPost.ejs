@@ -14,6 +14,36 @@
                     <option>-- SELECT --</option>
                 </select>
             </div>
+            <div class="form-group">
+                <button type="button" id="togglePollBtn" class="btn btn--green">Include Poll</button>
+            </div>
+            <div class="poll-form">
+                <div class="form-group poll-option poll-option--1">
+                    <label class="label">Option A</label>
+                    <input type="text" class="text-input"/>
+                </div>
+                <div class="form-group poll-option poll-option--2">
+                    <label class="label">Option B</label>
+                    <input type="text" class="text-input"/>
+                </div>
+                <div class="form-group poll-option poll-option--3">
+                    <label class="label">Option C</label>
+                    <input type="text" class="text-input"/>
+                </div>
+                <div class="form-group poll-option poll-option--4">
+                    <label class="label">Option D</label>
+                    <input type="text" class="text-input"/>
+                </div>
+                <div class="form-group poll-option poll-option--5">
+                    <label class="label">Option E</label>
+                    <input type="text" class="text-input"/>
+                </div>
+                <div class="form-group poll-option poll-option--6">
+                    <label class="label">Option F</label>
+                    <input type="text" class="text-input"/>
+                </div>
+                <button type="button" id="addPollOption" class="btn btn--green">+ Add</button>
+            </div>
         </form>
         <script>
             const topicsLink = document.querySelector('.topics-link');
@@ -22,6 +52,45 @@
             topicsLink.addEventListener('click', () => {
                 topicsPane.classList.toggle('show');
             });
+
+
+            //Add poll option
+            let counter = 3;
+            const addPollOptBtn = document.querySelector('#addPollOption');
+
+            addPollOptBtn.addEventListener('click', () => {
+
+                if(counter < 7){
+
+                    document.querySelector(`.poll-option--${counter}`).classList.add('show');
+                    if(counter === 6){
+                        addPollOptBtn.style.display = 'none';
+                    }
+                    ++counter;
+
+                }
+
+            });
+
+            let includePoll = false;
+            const togglePollBtn = document.querySelector('#togglePollBtn');
+
+            function togglePoll(){
+
+                includePoll = !includePoll;
+
+                if(includePoll){
+                    togglePollBtn.innerText = 'Exclude Poll';
+                }else {
+                    togglePollBtn.innerText = 'Include Poll';
+                }
+
+                document.querySelector('.poll-form').classList.toggle('show');
+
+            }
+
+            togglePollBtn.addEventListener('click', togglePoll);
+
         </script>
     </body>
 </html>

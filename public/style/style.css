@@ -93,3 +93,46 @@ svg, .icon {
   outline: none; }
   .text-input:focus {
     border: 2px solid #ade2ff; }
+
+select {
+  cursor: pointer; }
+
+.btn {
+  font-size: 1.6rem;
+  border: 0;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer; }
+  .btn--green {
+    background: #5dcf70;
+    color: #fff; }
+
+.poll-form {
+  background: #fff;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: .5rem;
+  display: none;
+  transition: .2s all; }
+  .poll-form.show {
+    display: block; }
+
+.poll-option--3 {
+  display: none; }
+  .poll-option--3.show {
+    display: block; }
+
+.poll-option--4 {
+  display: none; }
+  .poll-option--4.show {
+    display: block; }
+
+.poll-option--5 {
+  display: none; }
+  .poll-option--5.show {
+    display: block; }
+
+.poll-option--6 {
+  display: none; }
+  .poll-option--6.show {
+    display: block; }
