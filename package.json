@@ -4,7 +4,9 @@
   "description": "A community forum",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "start-dev": "nodemon app", 
+    "watch-sass" : "node-sass -w sass/main.scss public/style/style.css"
   },
   "keywords": [
     "forum"
@@ -12,6 +14,7 @@
   "author": "Hayden Bradfield",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "express-validator": "^6.2.0",
@@ -20,6 +23,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "node-sass": "^4.13.0",
     "nodemon": "^1.19.4",
     "sequelize-cli": "^5.5.1"
   }

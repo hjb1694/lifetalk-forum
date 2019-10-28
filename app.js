@@ -6,7 +6,7 @@ const {HOST, PORT} = require('./config/config');
 const app = express();
 
 //Serve static Files
-app.use(express.static(path.join(__dirname + 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Parse incoming requests
 app.use(express.json());
