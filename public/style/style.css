@@ -94,6 +94,9 @@ svg, .icon {
   .text-input:focus {
     border: 2px solid #ade2ff; }
 
+.textarea {
+  height: 20rem; }
+
 select {
   cursor: pointer; }
 

@@ -45,22 +45,14 @@
                 <button type="button" id="addPollOption" class="btn btn--green">+ Add</button>
             </div>
             <div class="form-group">
-                <textarea class="editor"></textarea>
+                <textarea class="text-input textarea"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="label">Choose an image</label>
+                <input type="file" accept="image/*"/>
             </div>
         </form>
-        <script src="/tinymce/tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
-
-            tinymce.init({
-                selector : '.editor', 
-                menubar : false, 
-                plugins : 'image',
-                toolbar : 'bold italic | image', 
-                images_upload_url : '', 
-                images_upload_handler : function(){
-                    
-                }
-            });
 
             const topicsLink = document.querySelector('.topics-link');
             const topicsPane = document.querySelector('.topics-pane');
