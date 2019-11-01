@@ -45,14 +45,52 @@
                 <button type="button" id="addPollOption" class="btn btn--green">+ Add</button>
             </div>
             <div class="form-group">
-                <textarea class="text-input textarea"></textarea>
+                <textarea id="postContent" class="text-input textarea"></textarea>
             </div>
             <div class="form-group">
-                <label class="label">Choose an image</label>
-                <input type="file" accept="image/*"/>
+                <div class="add-image-btn">
+                    <input type="file" class="add-image-btn__input" accept="image/*"/>
+                    <div class="add-image-btn__select">
+                        <div>+ Add Image</div>
+                        <div class="image-preview-container"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Ask Anonymously</label>
+                <input type="checkbox"/>
             </div>
         </form>
         <script>
+
+            const imageInput = document.querySelector('.add-image-btn__input');
+
+            document.querySelector('.add-image-btn__select').addEventListener('click', () => {
+                document.querySelector('.add-image-btn__input').click();
+            });
+
+            imageInput.addEventListener('change', () => {
+
+                const file = imageInput.files[0];
+
+                const existingImg = document.querySelector('.img-preview');
+
+                if(existingImg){
+                    existingImg.remove();
+                }
+
+                const img = document.createElement('img');
+                img.className = 'img-preview';
+                document.querySelector('.image-preview-container').appendChild(img);
+
+                const reader = new FileReader();
+                reader.onload = e => {
+                    img.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+
+
+            });
 
             const topicsLink = document.querySelector('.topics-link');
             const topicsPane = document.querySelector('.topics-pane');

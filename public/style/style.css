@@ -14,22 +14,22 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 .header {
-  min-height: 7rem;
-  background: #000; }
+  min-height: 5rem;
+  background: #333; }
 
 .logo {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #fff;
   text-align: center;
   font-family: 'Staatliches', cursive; }
 
 .nav {
   min-height: 5rem;
-  background: linear-gradient(to bottom right, #417aa3, #69a5d1);
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background: #ff6a00; }
 
 .nav-cat {
   display: flex;
@@ -38,7 +38,7 @@ body {
   transition: all .2s;
   cursor: pointer;
   text-decoration: none;
-  color: #000; }
+  color: #fff; }
   .nav-cat__title {
     font-size: 2rem; }
   .nav-cat:hover {
@@ -48,7 +48,7 @@ body {
 .topics-pane {
   height: 0;
   overflow: hidden;
-  background: #ddd;
+  background: #333;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -58,16 +58,18 @@ body {
     font-size: 2rem;
     margin: 1rem;
     transition: all .2s;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #ff6a00; }
     .topics-pane__link:hover {
-      color: #417aa3; }
+      color: #fff; }
   .topics-pane.show {
     height: 10rem;
     padding: 1rem; }
 
 svg, .icon {
   width: 3rem;
-  height: 3rem; }
+  height: 3rem;
+  fill: #eee; }
 
 .newPostForm {
   margin: 2rem auto;
@@ -82,7 +84,7 @@ svg, .icon {
   margin-bottom: 3px; }
 
 .text-input {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: .5rem;
   font-size: 1.8rem;
   font-family: inherit;
@@ -92,7 +94,7 @@ svg, .icon {
   width: 100%;
   outline: none; }
   .text-input:focus {
-    border: 2px solid #ade2ff; }
+    border: 1px solid #ade2ff; }
 
 .textarea {
   height: 20rem; }
@@ -111,12 +113,11 @@ select {
     color: #fff; }
 
 .poll-form {
-  background: #fff;
-  border: 2px solid #ccc;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.24);
   padding: 1rem;
-  border-radius: .5rem;
   display: none;
-  transition: .2s all; }
+  transition: .2s all;
+  background: #fff; }
   .poll-form.show {
     display: block; }
 
@@ -139,3 +140,29 @@ select {
   display: none; }
   .poll-option--6.show {
     display: block; }
+
+.add-image-btn {
+  position: relative; }
+  .add-image-btn__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden; }
+  .add-image-btn__select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    z-index: 1;
+    padding: 1rem;
+    background: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem; }
+
+.img-preview {
+  width: 5rem; }
